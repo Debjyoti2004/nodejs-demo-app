@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "preinstall": "npx npm-force-resolutions",
     "test": "jest",
     "lint": "eslint .",
     "dev": "nodemon index.js",
@@ -23,10 +22,6 @@
     "eslint-plugin-n": "^16.6.2",
     "eslint-plugin-promise": "^6.5.1",
     "jest": "^30.0.5",
-    "nodemon": "^3.1.4",
-    "npm-force-resolutions": "^0.0.10"
-  },
-  "resolutions": {
-    "semver": "7.5.2"
+    "nodemon": "^3.1.4"
   }
 }
