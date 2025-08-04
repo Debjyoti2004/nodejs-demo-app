@@ -27,6 +27,6 @@
     "npm-force-resolutions": "^0.0.10"
   },
   "resolutions": {
-    "semver": "^7.5.2"
+    "semver": "7.5.2"
   }
 }
