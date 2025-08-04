@@ -4,7 +4,7 @@ This repository contains a simple Node.js Express application that is automatica
 
 ## 🚀 Overview
 
-The primary goal of this project is to demonstrate a modern DevOps workflow. Every time code is pushed to the `main` branch, a series of automated jobs are triggered to ensure code quality, security, and a seamless deployment process.
+The primary goal of this project is to demonstrate a modern DevOps workflow. Every time code is pushed to the `master` branch, a series of automated jobs are triggered to ensure code quality, security, and a seamless deployment process.
 
 ## 🛠️ Tech Stack
 
@@ -17,7 +17,7 @@ The primary goal of this project is to demonstrate a modern DevOps workflow. Eve
 
 ## ⚙️ The CI/CD Pipeline
 
-The entire automation is defined in the `.github/workflows/main.yml` file. The pipeline is triggered on every `push` or `pull_request` to the `main` branch and consists of three sequential jobs.
+The entire automation is defined in the `.github/workflows/main.yml` file. The pipeline is triggered on every `push` or `pull_request` to the `master` branch and consists of three sequential jobs.
 
 ![CI/CD Pipeline Flow](assets/github-action.png)
 
@@ -29,7 +29,7 @@ The entire automation is defined in the `.github/workflows/main.yml` file. The p
     * This job must pass before the next job can begin.
 
 2.  **`build-and-push` Job**:
-    * This job only runs if the `test` job succeeds and the trigger is a push to `main`.
+    * This job only runs if the `test` job succeeds and the trigger is a push to `master`.
     * Logs into Docker Hub using encrypted secrets.
     * Builds a Docker image from the `Dockerfile`.
     * Tags the image with two labels: `latest` and the unique Git commit SHA for traceability.
@@ -50,7 +50,7 @@ Upon a successful pipeline run, the application's Docker image is pushed to a pu
 
 The automation ensures that no code can be deployed without passing all quality and security gates.
 
-1.  A developer pushes code to the `main` branch.
+1.  A developer pushes code to the `master` branch.
 2.  GitHub Actions automatically triggers the `test` job.
 3.  If tests pass, the `build-and-push` job creates and deploys the Docker image.
 4.  Finally, the `scan` job verifies the security of the deployed image.
@@ -63,8 +63,8 @@ To run this application on your local machine, follow these steps:
 
 1.  **Clone the repository:**
     ```bash
-    git clone <your-repo-url>
-    cd <your-repo-name>
+    git clone https://github.com/Debjyoti2004/nodejs-demo-app.git
+    cd nodejs-demo-app.git
     ```
 
 2.  **Install dependencies:**
